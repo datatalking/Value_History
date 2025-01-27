@@ -16,9 +16,10 @@ EXPECTED_HEADERS = [
 		"ApprImpIncr", "LandVal", "ImpsVal", "TaxValReason", "TaxStatus",
 		"LevyCode", "ChangeDate", "ChangeDocId", "Reason", "SplitCode"]
 
+# TODO add LAT/LONG coordinates of some kind for reference
 UN_EXPECTED_HEADERS = ["ZipCode", "Address", "Value"]
 
-
+# TODO migrate this class to src
 class RealEstateDBLoader:
 	"""
 	Loads real estate data from CSV files into SQLite database.
@@ -82,6 +83,8 @@ class RealEstateDBLoader:
 			logger.error(f"Error reading CSV headers from {csv_path}: {str(e)}")
 			return False
 
+	# TODO reference filenames, filePATH in .env file or config.py
+	# TODO coordinate with a test function to see if they are available, if not tell user
 	def find_valid_csv(self, search_paths: List[str] = [".", "data"]) -> Optional[Path]:
 		"""
 		Find first CSV file with matching headers in given paths.
@@ -101,6 +104,7 @@ class RealEstateDBLoader:
 		logger.warning("No valid CSV files found")
 		return None
 
+	# TODO add a test loading feature for all known types within this class before loading
 	def load_data(self, csv_path: Path) -> bool:
 		"""
 		Load data from CSV file into SQLite database.
