@@ -30,9 +30,6 @@ class RealEstateDBLoader:
 		"ApprImpIncr", "LandVal", "ImpsVal", "TaxValReason", "TaxStatus",
 		"LevyCode", "ChangeDate", "ChangeDocId", "Reason", "SplitCode"
 	]
-		("Major", "Minor", "TaxYr", "OmitYr", "ApprLandVal", "ApprImpsVal",
-		 "ApprImpIncr", "LandVal", "ImpsVal", "TaxValReason", "TaxStatus",
-		 "LevyCode", "ChangeDate", "ChangeDocId", "Reason", "SplitCode")
 
 	def __init__(self, db_path: str = "data/real_estate.db"):
 		"""
