@@ -1,2 +1,7 @@
 pandas~=2.2.3
 pyodbc~=5.2.0
+pytest-dotenv
+unittest
+pathlib
+typing
+sqlite3
