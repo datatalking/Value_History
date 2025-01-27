@@ -76,6 +76,59 @@ This comprehensive migration aims to create a robust, standardized, and scalable
 - Validate data types, constraints, and indexes for seamless migration.
 - Perform sample migrations to ensure cloud readiness.
 
+### Step 5: Versioned Progress Plan
+
+Each phase of the project is tracked with version numbers and evaluated for progress and testing:
+
+v1.0.0: CSV Ingestion
+
+Raw data ingestion from massive CSV dumps provided by the client.
+
+Parsing and cleaning CSV data.
+
+Creation of the SQLite database to store standardized data.
+
+Testing headers, data types, and basic schema validation.
+
+v1.0.1: Data Validation and Testing
+
+Validate ingested data against predefined schemas.
+
+Run data integrity tests to check for missing or incorrect entries.
+
+Implement automated unit tests for consistency and coverage.
+
+v1.0.2: Local SQL Server Migration
+
+Test the migration of data from SQLite to a locally hosted SQL Server 2017 instance via Docker.
+
+Use Azure Data Studio for validation and manual queries.
+
+Ensure compatibility between SQLite and SQL Server data types, indexes, and constraints.
+
+v1.1.0: TXT Data Handling
+
+Add support for ingesting and parsing TXT files.
+
+Extend schema validation to handle TXT-specific edge cases (e.g., delimiters).
+
+v1.2.0: XLS Data Handling
+
+Add support for reading and cleaning Excel (XLS/XLSX) files.
+
+Verify column mappings and handle multi-sheet data.
+
+v1.9.0: TSV and Parquet Support
+
+Finalize ingestion pipelines for TSV and Parquet files.
+
+Optimize performance for large-scale Parquet files.
+
+v2.0.0: Cloud Deployment
+
+Migrate the final consolidated database to a cloud-based SQL Server instance.
+
+Test query performance and cloud integration.
 ---
 
 ## Technology Stack
