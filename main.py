@@ -6,6 +6,7 @@ from typing import List, Optional
 import logging
 from datetime import datetime
 import pyodbc
+import pytest_dotenv
 
 
 logging.basicConfig(level=logging.INFO)
