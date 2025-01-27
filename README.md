@@ -78,53 +78,56 @@ This comprehensive migration aims to create a robust, standardized, and scalable
 
 ### Step 5: Versioned Progress Plan
 
-Each phase of the project is tracked with version numbers and evaluated for progress and testing:
+- Each phase of the project is tracked with version numbers and evaluated for progress and testing:
 
-v1.0.0: CSV Ingestion
+#### v1.0.0: CSV Ingestion
 
-Raw data ingestion from massive CSV dumps provided by the client.
+# DONE
+- Raw data ingestion from massive CSV dumps provided by the client.
 
-Parsing and cleaning CSV data.
+# DOING
+- Parsing and cleaning CSV data.
+- Creation of the SQLite database to store standardized data.
+- Testing headers, data types, and basic schema validation.
 
-Creation of the SQLite database to store standardized data.
+#### v1.0.1: Data Validation and Testing
 
-Testing headers, data types, and basic schema validation.
+#TODO
+- Validate ingested data against predefined schemas.
+- Run data integrity tests to check for missing or incorrect entries.
+- Implement automated unit tests for consistency and coverage.
 
-v1.0.1: Data Validation and Testing
+#### v1.0.2: Local SQL Server Migration
 
-Validate ingested data against predefined schemas.
+#TODO
+- Test the migration of data from SQLite to a locally hosted SQL Server 2017 instance via Docker.
+- Use Azure Data Studio for validation and manual queries.
+- Ensure compatibility between SQLite and SQL Server data types, indexes, and constraints.
 
-Run data integrity tests to check for missing or incorrect entries.
+#### v1.1.0: TXT Data Handling
 
-Implement automated unit tests for consistency and coverage.
+#TODO
+- Add support for ingesting and parsing TXT files.
+- Extend schema validation to handle TXT-specific edge cases (e.g., delimiters).
 
-v1.0.2: Local SQL Server Migration
+#### v1.2.0: XLS Data Handling
 
-Test the migration of data from SQLite to a locally hosted SQL Server 2017 instance via Docker.
+#TODO
+- Add support for reading and cleaning Excel (XLS/XLSX) files.
+- Verify column mappings and handle multi-sheet data.
 
-Use Azure Data Studio for validation and manual queries.
+#### v1.9.0: TSV and Parquet Support
 
-Ensure compatibility between SQLite and SQL Server data types, indexes, and constraints.
+#TODO
+- Finalize ingestion pipelines for TSV and Parquet files.
+- Optimize performance for large-scale Parquet files.
 
-v1.1.0: TXT Data Handling
+#### v2.0.0: Cloud Deployment
 
-Add support for ingesting and parsing TXT files.
+#TODO
+- Testing cloud deployment matches SoW 
 
-Extend schema validation to handle TXT-specific edge cases (e.g., delimiters).
-
-v1.2.0: XLS Data Handling
-
-Add support for reading and cleaning Excel (XLS/XLSX) files.
-
-Verify column mappings and handle multi-sheet data.
-
-v1.9.0: TSV and Parquet Support
-
-Finalize ingestion pipelines for TSV and Parquet files.
-
-Optimize performance for large-scale Parquet files.
-
-v2.0.0: Cloud Deployment
+#### v2.0.0: Cloud Migration to Azure 3.0.0 Cloud
 
 Migrate the final consolidated database to a cloud-based SQL Server instance.
 
